@@ -12,11 +12,11 @@ public class ProductBasket {
         size = 0;
     }
     public void addProduct(Product product) {
-        System.out.println("Невозможно добавить продукт");
         if (size < products.length) {
             products[size] = product;
             size++;
         } else {
+            System.out.println("Невозможно добавить продукт");
         }
     }
     public int getTotalPrice() {
@@ -27,6 +27,10 @@ public class ProductBasket {
         return total;
     }
     public void printProductBasket() {
+        if (size == 0) {
+            System.out.println("Корзина пустая");
+            return;
+        }
         for (Product product : products) {
             if (product != null) {
                 System.out.println(product.getName() + ": " + product.getPrice());
