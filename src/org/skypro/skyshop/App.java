@@ -1,13 +1,11 @@
 package org.skypro.skyshop;
 
- import org.skypro.skyshop.product.Product;
  import org.skypro.skyshop.basket.ProductBasket;
  import org.skypro.skyshop.product.SimpleProduct;
  import org.skypro.skyshop.product.DiscountedProduct;
  import org.skypro.skyshop.product.FixPriceProduct;
- import java.util.List;
 
-public class App {
+ public class App {
     public static void main(String[] args) {
         ProductBasket productBasket = new ProductBasket(5);
 
