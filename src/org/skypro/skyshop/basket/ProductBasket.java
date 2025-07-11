@@ -21,22 +21,37 @@ public class ProductBasket {
     }
     public int getTotalPrice() {
         int total = 0;
-        for (int i = 0; i < size; i++) {
-            total += products[i].getPrice();
+        for (Product product : products) {
+            if (product != null) {
+                total += product.getPrice();
+            }
         }
         return total;
     }
     public void printProductBasket() {
         if (size == 0) {
-            System.out.println("Корзина пустая");
+            System.out.println("В корзине пусто");
             return;
         }
         for (Product product : products) {
             if (product != null) {
-                System.out.println(product.getName() + ": " + product.getPrice());
+                System.out.println(product);
+            }
+            if (product != null && product.isSpecial()) {
+                specialCount++;
             }
         }
         System.out.println("Итого: " + getTotalPrice());
+        System.out.println("Специальных товаров: " + specialCount);
+    }
+
+    public boolean hasProduct(String name) {
+        for (Product product : products) {
+            if (product.getName().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void clear() {
