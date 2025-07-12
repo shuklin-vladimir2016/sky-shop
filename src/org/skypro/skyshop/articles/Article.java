@@ -29,7 +29,7 @@ public final class Article implements Searchable {
 
     @Override
     public String getContentType() {
-        return "";
+        return "*/*";
     }
 
     @Override
