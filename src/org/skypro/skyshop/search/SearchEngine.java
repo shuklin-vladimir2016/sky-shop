@@ -1,9 +1,12 @@
-package org.skypro.skyshop.exceptions;
+package org.skypro.skyshop.search;
+
+import org.skypro.skyshop.exceptions.BestResultNotFound;
+import org.skypro.skyshop.exceptions.Searchable;
 
 import java.util.List;
 
 public class SearchEngine {
-    public Searchable findBestMatch(String search, List<? extends Searchable> items) throws BestResultNotFound {
+    public Searchable findBestMatch(String search) throws BestResultNotFound {
         if (search == null || search.isEmpty() || items == null || items.isEmpty()) {
             throw new BestResultNotFound(search);
         }
@@ -21,7 +24,7 @@ public class SearchEngine {
                 bestMatch = item;
             }
         }
-        if (bestMatch == null || maxCount == 0) {
+        if (bestMatch == null) {
             throw new BestResultNotFound(search);
         }
         return bestMatch;

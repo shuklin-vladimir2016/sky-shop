@@ -1,13 +1,15 @@
 package org.skypro.skyshop;
 
-import org.skypro.skyshop.basket.Article;
+import org.skypro.skyshop.articles.Article;
 import org.skypro.skyshop.basket.ProductBasket;
 import org.skypro.skyshop.product.Product;
+import org.skypro.skyshop.product.SimpleProduct;
+import org.skypro.skyshop.product.DiscountedProduct;
 import org.skypro.skyshop.exceptions.*;
+import org.skypro.skyshop.search.SearchEngine;
+import org.skypro.skyshop.search.Searchable;
 
-import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class App {

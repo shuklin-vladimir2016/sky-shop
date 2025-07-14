@@ -1,9 +1,9 @@
-package org.skypro.skyshop.basket;
+package org.skypro.skyshop.articles;
 
 import org.skypro.skyshop.exceptions.Searchable;
 
 public class Article implements Searchable {
-    private String title;
+    private final String title;
 
     public Article(String title) {
         this.title = title;

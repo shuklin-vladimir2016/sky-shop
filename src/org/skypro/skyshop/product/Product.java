@@ -1,8 +1,8 @@
 package org.skypro.skyshop.product;
 
-public class Product {
+public abstract class Product {
     private String name;
-    int price;
+    private int price;
 
     public Product(String name, int price) {
         if (name == null || name.isBlank()) {
@@ -10,8 +10,6 @@ public class Product {
         }
         this.name = name;
         this.price = price;
-    }
-    public Product(String name) {
     }
     public String getName() {
         return name;

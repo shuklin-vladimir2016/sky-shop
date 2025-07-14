@@ -9,7 +9,6 @@ import org.skypro.skyshop.product.Product;
 
 public class ProductBasket {
     private final List<Product> products;
-    private int size;
 
     public ProductBasket() {
         products = new ArrayList<>();
@@ -35,6 +34,7 @@ public class ProductBasket {
         }
         return removedProduct;
     }
+
     public int getTotalPrice() {
         int total = 0;
         for (Product product : products) {
