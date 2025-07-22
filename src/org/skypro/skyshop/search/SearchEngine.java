@@ -5,8 +5,8 @@ import org.skypro.skyshop.exceptions.BestResultNotFound;
 import java.util.List;
 
 public class SearchEngine {
-    public Searchable findBestMatch(String search, List<? extends Searchable> items) throws BestResultNotFound {
-        if (search == null || search.isEmpty() || items.isEmpty()) {
+    public Searchable findBestMatch(String search) throws BestResultNotFound {
+        if (search == null || search.isEmpty() || items == null || items.isEmpty()) {
             throw new BestResultNotFound(search);
         }
 

@@ -20,10 +20,6 @@ public class ProductBasket {
         products.add(product);
     }
 
-    public void removeProduct(Product product) {
-        products.remove(product);
-    }
-
     public List<Product> removeProductByName(String name) {
         List<Product> removedProduct = new ArrayList<>();
         Iterator<Product> iterator = products.iterator();
@@ -76,5 +72,9 @@ public class ProductBasket {
             }
         }
         return false;
+    }
+
+    public void clear() {
+        Arrays.fill(List<products> null);
     }
 }
