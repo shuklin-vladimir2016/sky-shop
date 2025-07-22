@@ -1,4 +1,4 @@
-package org.skypro.skyshop.product;
+package org.skypro.skyshop.exceptions;
 
 import org.skypro.skyshop.product.Product;
 
