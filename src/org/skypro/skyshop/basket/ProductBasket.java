@@ -12,7 +12,6 @@ import org.skypro.skyshop.product.Product;
 public class ProductBasket {
     private final List<Product> products;
 
-
     public ProductBasket() {
         products = new ArrayList<>();
     }
@@ -75,6 +74,6 @@ public class ProductBasket {
     }
 
     public void clear() {
-        Arrays.fill(List<products> null);
+        Arrays.fill(products, null);
     }
 }

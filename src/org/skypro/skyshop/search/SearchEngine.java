@@ -2,14 +2,20 @@ package org.skypro.skyshop.search;
 
 import org.skypro.skyshop.exceptions.BestResultNotFound;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SearchEngine {
+    private List<Searchable> items;
+
+    public SearchEngine() {
+        items = new ArrayList<>();
+    }
     public Searchable findBestMatch(String search) throws BestResultNotFound {
+
         if (search == null || search.isEmpty() || items == null || items.isEmpty()) {
             throw new BestResultNotFound(search);
         }
-
         String searchLower = search.toLowerCase();
         Searchable bestMatch = null;
         int maxCount = 0;
