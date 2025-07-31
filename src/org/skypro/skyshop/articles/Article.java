@@ -1,0 +1,40 @@
+package org.skypro.skyshop.articles;
+
+import org.skypro.skyshop.search.Searchable;
+
+public class Article implements Searchable {
+    private final String title;
+
+    public Article(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Название: " + title;
+    }
+
+    @Override
+
+    public String getSearchTerm() {
+        return title;
+    }
+
+    @Override
+    public String getName() {
+        return title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o = null || getClass() != o.getClass()) return false;
+        Article article = (Article) o;
+        return title != null ? title.equals(article.title) : article.title == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return title != null ? title.hashCode() : 0;
+    }
+}
