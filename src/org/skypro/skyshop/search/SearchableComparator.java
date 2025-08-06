@@ -6,9 +6,10 @@ public class SearchableComparator implements Comparator<Searchable> {
 
     @Override
     public int compare(Searchable a1, Searchable a2) {
-        if (a1 == a2) return 0;
-        if (a1 == null) return -1;
-        if (a1 == null) return 1;
+        int lengthCompare = Integer.compare(a1.getName().length(), a2.getName().length());
+        if (lengthCompare != 0) {
+            return lengthCompare;
+        }
         return a1.getName().compareTo(a2.getName());
     }
 }
