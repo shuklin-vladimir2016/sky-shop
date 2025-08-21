@@ -53,7 +53,4 @@ public class ProductBasket {
         }
         return false;
     }
-    public void clear() {
-        Arrays.fill(products, null);
-    }
 }
